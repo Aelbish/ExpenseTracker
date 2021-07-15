@@ -24,16 +24,18 @@ const ExpenseItem = (props) => {
     //We can add a className to our custom component too, but check the Card.js component
     //We have added {props.children} which will allow us to use our css in our custom component
     //{props.children will hold} the code between <Card> and </Card>
-    <Card className="expense-item">
-      {/* Here we have accessed those properties that have been passed from App.js in props */}
-      <ExpenseDate date={props.date} />
-      <div className="expense-item__description">
-        <h2>{props.title}</h2>
-        <div className="expense-item__price">${props.amount}</div>
-      </div>
-      {/* we pass function that neeeds to be executed to onclick attribute, we donot execute it just pass the function*/}
-      {/* <button onClick={clickHandler}>Change Title</button> */}
-    </Card>
+    <li>
+      <Card className="expense-item">
+        {/* Here we have accessed those properties that have been passed from App.js in props */}
+        <ExpenseDate date={props.date} />
+        <div className="expense-item__description">
+          <h2>{props.title}</h2>
+          <div className="expense-item__price">${props.amount}</div>
+        </div>
+        {/* we pass function that neeeds to be executed to onclick attribute, we donot execute it just pass the function*/}
+        {/* <button onClick={clickHandler}>Change Title</button> */}
+      </Card>
+    </li>
   );
 };
 
